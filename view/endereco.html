@@ -12,39 +12,38 @@
 </head>
 <body>
     <header>
-
+        
     </header>
 
     <main>
         <section class="form">
             <div class="posicao_logo">
-                <img src="../img/logoSportLife.jpeg" class="logo_endereço">
+                <img src="../img/logoSportLife.jpeg" class="logo_endereço" alt="Logo">
             </div>
             <h1 class="titulo_forms">Cadastre seu endereço 🏠</h1>
             <div>
                 <form>
                     <label class="info_forms" for="title">Título</label>
-                    
-                    <input type="text" id="title" name="title" placeholder="Ex: Minha Casa">
-    
+                    <input type="text" id="title" name="title" placeholder="Ex: Minha Casa" >
+
                     <label class="info_forms" for="cep">CEP</label>
-                    <input type="text" id="cep" name="cep" placeholder="Insira o seu CEP">
-                    
-    
-                    <label class="info_forms" for="adress">Endereço</label>
-                    <input type="text" id="adress" name="adress" placeholder="Endereço completo">
-    
+                    <input type="text" id="cep" name="cep" placeholder="Insira o seu CEP" >
+
+                    <label class="info_forms" for="address">Endereço</label>
+                    <input type="text" id="address" name="address" placeholder="Endereço completo" >
+
                     <label class="info_forms" for="number">Número</label>
-                    <input type="number" id="number" name="number" placeholder="Número residencial">
-     
+                    <input type="number" id="number" name="number" placeholder="Número residencial" >
+
                     <label class="info_forms" for="complement">Complemento</label>
                     <input type="text" id="complement" name="complement" placeholder="Complemento residencial">
                       
-                    <input type="button" value="Cadastrar endereço" onclick= "cadastroUsuario()"> 
-                    
+                    <input type="button" value="Cadastrar endereço" onclick="cadastrarEndereco()"> 
+
                 </form>
             </div>
         </section>
     </main>
+    <script src="../script/endereco.js"></script>
 </body>
 </html>

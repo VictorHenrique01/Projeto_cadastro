@@ -42,7 +42,7 @@ async function loginUsuario() {
         
         
         if (respostaErro.data && respostaErro.data.errors) {
-            alert(Object.values(respostaErro.data.errors));
+            alert(respostaErro.data.errors);
     }
     }
 
