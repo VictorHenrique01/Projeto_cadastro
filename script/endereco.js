@@ -15,6 +15,32 @@ async function cadastrarEndereco() {
         return;
     }
 
+        if (!title){
+        alert('É necessário preencher este campo.')
+        return;
+    }
+
+
+    if (!cep){
+        alert('É necessário preencher este campo.')
+        return;
+    }
+
+    if (!address){
+        alert('É necessário preencher este campo.')
+        return;
+    }
+
+    if (!number){
+        alert('É necessário preencher este campo.')
+        return;
+    }
+
+    if (!complement){
+        alert('É necessário preencher este campo.')
+        return;
+    }
+
     let api = await fetch(url, {
         method: "POST",
         body: JSON.stringify({
@@ -30,6 +56,7 @@ async function cadastrarEndereco() {
         }
     });
 
+    
     if (api.ok) {
         let resposta = await api.json();
         console.log(resposta)
