@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --cor-de-fundo: #B3C8CF;
+    --cor-secundaria: #f7f7f7;
+    --cor-detalhe: darkblue;
+    
+}
+
+body{
+    background-color: var(--cor-de-fundo);
+}
+
+.posicao_menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 15.625rem;
+    padding: 10px 0 0 20px;
+}
+
+.logo_cadastro{
+    border-radius: 50%;
+    margin-left: 2.50rem;
+    height: 6.55rem;
+    width: 6.25rem;
+}
+
+.menu_cabecalho{
+    display: flex;
+    gap: 10px
+}
+
+.botao_cadastro {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 300;
+    text-decoration: none;  
+    padding: 8px 12px;      /* Adiciona espaçamento interno (padding) ao botão */
+    background-color: var(--cor-detalhe); 
+    color: var(--cor-secundaria);           
+    border-radius: 5px;      
+    border: 3px groove var(--cor-secundaria);
+}
+
+.botao_cadastro:hover{
+    background-color: #AAB396;
+}
+
+.inicio_pagina {
+    display: flex;
+    justify-content: center;
+    align-items: center;   /* Centraliza o conteúdo verticalmente */
+    flex-direction: column; /* Organiza o conteúdo em coluna, para o título ficar em cima */
+    text-align: center;
+    padding: 5% 5%;        /* Adiciona espaçamento interno (padding) maior do topo */
+    background-image: url("../img/imgDeFundo.png");
+    background-repeat: no-repeat;
+    background-position: center top; /* Centraliza a imagem de fundo horizontalmente no topo */
+    background-size: contain;  /* Ajusta a imagem para caber dentro da área sem cortá-la */
+}
+
+.titulo_home {
+    margin-top: 20px;
+    font-size: 5em;   
+    font-weight: bold;     
+    color: var(--cor-secundaria)
+    
+}
+
+.secundario{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.subtitulo_home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;  
+}
+
+.texto_home{
+    font-family: "Gayathri", sans-serif;
+    font-weight: 600;
+    margin-bottom: 30px; 
+}
+
+.decora_botao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.produtos{
+    text-align: center;
+}
+
+.titulo_produtos{
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.lista_produtos{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 5em 0;
+    gap: 1.75rem;
+}
+
+.pics{
+    height: 18rem;
+    width: 16rem;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.rodape {
+    background-color: var(--cor-detalhe);
+    color: var(--cor-secundaria);
+    padding: 20px; /*20px de espaçamento ao redor do conteúdo*/
+    text-align: center;
+}
+
+.footer_info {
+    display: flex; /* blocos na horizonral*/
+    justify-content: space-around; /* alinhamento horizontal com o space-around que coloca espaços iguais ao redor de cada item */
+    flex-wrap: wrap; /*O valor wrap permite que os elementos dentro do contêiner sejam movidos para uma nova linha se a tela for pequena demais para acomodar todos em uma única linha*/
+}
+
+.footer_info div {
+    flex: 1; /* cada bloco ocupa o mesmo tamanho no espaço disponível, se o contêiner .footer_info tiver 1000 pixels de largura, cada bloco ocupará 500 pixels (metade do contêiner). */
+    margin: 10px; /* espaço externo de 10px acima , abaixo , à esquerda e à direita do elemento. */
+}
+
+.footer_contato h4, /* aqui todos os títulos vão ser decorados da mesma forma */
+.footer_about h4 {
+    border-bottom: 2px solid var(--cor-secundaria); /* essa é a borda embaixo dos títulos 'Contato' e 'Sobre nós' */
+    padding-bottom: 5px; /* espaço entre os títulos e a borda embaixo */
+    margin-bottom: 10px; /* cria um espaço abaixo do elemento, ou seja, separando do conteúdo que vem embaixo */
+}
+
+
+.footer_bottom {
+    margin-top: 20px;
+}

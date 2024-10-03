@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+:root{
+    --cor-primaria: #B3C8CF;
+    --cor-secundaria: black;
+    --cor-texto-forms: white;
+}
+
+body{  
+    /* height: 100vh; */
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    background-image: url(../img/fundo_cadastroo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+.logo_cadastro{
+    border-radius: 50%;
+    height: 6.55rem;
+    width: 6.25rem;
+    position: absolute;
+    top: 1rem; 
+    
+}
+
+.menu{
+    padding: 0.5rem 5%; 
+    position: relative;
+}
+
+.lista_menu{
+    display: flex;
+    justify-content: center;
+    top: -1rem;
+    font-family: "Unlock", serif;
+    color: #7c33c4;
+    list-style-type: none;
+    gap: 2.82rem;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 1.3rem
+    
+}
+
+
+.item_lista{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.item_lista:active{
+    color: #f26638;
+}
+
+.titulo_forms{
+    color: var(--cor-texto-forms);
+    font-family: "Unlock", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 1.5rem;
+}
+
+.info_forms{
+    color: var(--cor-texto-forms);
+    margin-bottom: 0.5rem;
+}
+
+.form{
+    display: grid; /* organiza os elementos em linhas e colunas */
+    grid-template-columns: 1fr ; /* todo o conteúdo será organizado em uma única coluna com 1 unidade fracionada */
+    margin: 0 auto; /* Centraliza o formulário horizontalmente. O 0 remove a margem superior e inferior, enquanto o auto ajusta as margens laterais automaticamente para centralizar o conteúdo */
+
+    max-width: 31.25rem; /* largura máxima do formulário */    
+    grid-gap: 1.25rem;  /* define a distância entre os itens do formulário */
+}
+.form {
+    /* esse segundo caso está sobrescrevendo a classe com a intenção de variar a margin em situações diferentes */
+    /* tava testando com outra margin */
+    display: grid;
+    grid-template-columns: 1fr; 
+    margin: 3.20rem auto; /*garanti que o formulário tivesse uma distância de 3.20 do topo e do rodapé de seu contêiner */
+    max-width: 31.25rem;        
+    grid-gap: 1.25rem;
+    padding: 1.25rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #1B1F3A;
+}
+
+/* Se o estilo for aplicado a um formulário específico e você quer controlar o estilo de diferentes tipos de inputs separadamente, usar seletores de tipo pode ser mais adequado */
+.form input[type="text"], 
+.form input[type="password"], 
+.form input[type="date"] {
+    padding: 0.625rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 1.25rem;
+}
+
+.form input[type="checkbox"] {
+    margin-right: 0.5rem; /* Pequeno espaço entre o checkbox e o texto */
+}
+
+.form input[type="button"] {
+    padding: 0.625rem;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /*altera a aparência do ponteiro do mouse quando o usuário passa o cursor no botão*/
+    margin-top: 1rem; /* Espaçamento acima do botão */
+}
+
+.form input[type="button"]:hover {
+    background-color: darkblue;
+}

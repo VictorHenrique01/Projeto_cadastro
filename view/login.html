@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SportLife</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+
+    <header>
+        
+    </header>
+
+    <main>
+        <div class="login-container">
+            <img src="../img/logoSportLife.jpeg" class="logo-img" alt="Logo SportLife">
+            <h1><span class="titulo_destaque">Login</span> - SportLife</h1>
+            <form onsubmit="event.preventDefault(); loginUsuario();">
+                <div class="input-group">
+                    <label class="texto_input" for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                </div>
+                <div class="input-group">
+                    <label class="texto_input" for="password">Senha:</label>
+                    <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                </div>
+                <button type="submit" class="login-btn">Entrar</button>
+                <p class="signup-link">Não tem uma conta? <a href="../view/cadastro.html">Cadastre-se</a></p>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 SportLife. Todos os direitos reservados.</p>
+        <p>
+            <a href="../view/politica_privacidade.html">Política de Privacidade</a> | 
+            <a href="../view/termos_uso.html">Termos de Uso</a>
+        </p>
+    </footer>
+
+    <script src="../script/login.js"></script> 
+</body>
+</html>

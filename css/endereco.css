@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+:root{
+    --cor-de-fundo: #B3C8CF;
+}
+
+body{
+    background-color: #B3C8CF;
+    background-image: url("../img/img3d.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: cover;
+    
+}
+
+
+.logo_endereço{
+    display: block;
+    margin: 0 auto 20px; 
+    height: 6.55rem;
+    width: 6.25rem;
+    border-radius: 50%; 
+    background-color: #836FFF; 
+    padding: 10px; 
+}
+
+h1{
+    display: block;
+    margin: 0 auto;
+    color: white;
+    font-family: "Unlock", system-ui;
+    font-weight: 700;
+    
+}
+
+.form {
+
+    display: grid;
+    grid-template-columns: 1fr; 
+    margin: 3.20rem auto; 
+    max-width: 31.25rem;        
+    grid-gap: 1.25rem;
+    padding: 1.25rem;
+    border-radius: 10px;
+    background-color: #1B1F3A;
+    box-shadow: 0px 4px 8px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--cor-de-fundo);
+    font-weight: bold;
+}
+
+.form input[type="text"],
+.form input[type="number"] {
+    padding: 0.625rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 1.25rem;
+
+} 
+
+.form input[type="button"] {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+
+}
