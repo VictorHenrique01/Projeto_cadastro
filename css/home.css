@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 :root{
     --cor-de-fundo: #B3C8CF;
     --cor-secundaria: #f7f7f7;
@@ -12,42 +16,60 @@
 }
 
 body{
-    background-color: var(--cor-de-fundo);
+    background-color: var(--cor-detalhe);
+    color: white;
+    
 }
+
+header{
+    background-color: var(--cor-detalhe);
+    
+}
+
+
 
 .posicao_menu{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-right: 17rem;
+    justify-content: center;
     padding: 10px 0 0 20px;
+}
+    
+.menu_cabecalho{
+    display: flex;
+    gap: 180px
 }
 
 .logo_cadastro{
+    
     border-radius: 50%;
-    margin-left: 2.50rem;
-    height: 6.55rem;
-    width: 6.25rem;
+    align-items: center;
+    height: 7.55rem;
+    width: 7.25rem;
+    border-radius: 50%; /* Deixa a imagem circular, se desejado */
+    background-color: var(--cor-detalhe); /* Cor de fundo roxa para imitar o círculo */
+    padding: 10px; /* Ajusta o espaço entre a logo e a borda */
 }
 
-.menu_cabecalho{
-    display: flex;
-    gap: 10px
-}
 
 .botao_cadastro {
-    font-family: "IBM Plex Serif", serif;
-    font-weight: 300;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    cursor: pointer;
     text-decoration: none;  
-    padding: 8px 12px;      /* Adiciona espaçamento interno (padding) ao botão */
-    background-color: var(--cor-detalhe); 
+    border: none;
+    padding: 10px 20px;      
     color: var(--cor-secundaria);           
-    border-radius: 5px;      
-    border: 3px groove var(--cor-secundaria);
+
 }
 
 .botao_cadastro:hover{
-    background-color: #AAB396;
+    background-color: #b3b3b3;
+    transform: scale(1.03);
+    padding: 8px 18px;
+    border-radius: 4px;
+    border: 2px groove white;
+    font-weight: 300;
 }
 
 .inicio_pagina {
@@ -57,29 +79,35 @@ body{
     flex-direction: column; /* Organiza o conteúdo em coluna, para o título ficar em cima */
     text-align: center;
     padding: 5% 5%;        /* Adiciona espaçamento interno (padding) maior do topo */
-    background-image: url("../img/imgDeFundo.png");
+    background-image: url("../img/teste-fundo.jpg");
     background-repeat: no-repeat;
-    background-position: center top; /* Centraliza a imagem de fundo horizontalmente no topo */
-    background-size: contain;  /* Ajusta a imagem para caber dentro da área sem cortá-la */
+    background-size: cover; /* Mudança aqui */
+    padding: 7.5% 10%; /* Aumenta o padding nas laterais */
+    
+    
+
 }
 
 .titulo_home {
+    font-size: 4rem; 
+    color: var(--cor-detalhe);
+    text-align: center; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,1.0); 
     margin-top: 20px;
-    font-size: 5em;   
-    font-weight: bold;     
-    color: var(--cor-secundaria)
-    
 }
 
 .secundario{
+    background: linear-gradient(to top, darkblue, white );
+    margin-top: -5px;
     text-align: center;
-    margin-top: 30px;
+    
 }
 
 .subtitulo_home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    text-align: center;
+    color: var(--cor-detalhe);
     margin-bottom: 30px;  
 }
 
@@ -96,12 +124,21 @@ body{
 }
 
 .produtos{
+    margin-top: 75px;
     text-align: center;
 }
 
+
+.detalhe_lista{
+    margin-top: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}
+
 .titulo_produtos{
-    font-weight: 600;
-    font-size: 2.5rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    
 }
 
 .lista_produtos{
@@ -116,12 +153,12 @@ body{
     height: 18rem;
     width: 16rem;
     border-radius: 5px;
-    border: 1px solid black;
+    border: 4px solid #A594F9;
 }
 
 .rodape {
-    background-color: var(--cor-detalhe);
-    color: var(--cor-secundaria);
+    background: linear-gradient(to top, white, darkblue ); ;
+    color: black;
     padding: 20px; /*20px de espaçamento ao redor do conteúdo*/
     text-align: center;
 }
@@ -142,6 +179,12 @@ body{
     border-bottom: 2px solid var(--cor-secundaria); /* essa é a borda embaixo dos títulos 'Contato' e 'Sobre nós' */
     padding-bottom: 5px; /* espaço entre os títulos e a borda embaixo */
     margin-bottom: 10px; /* cria um espaço abaixo do elemento, ou seja, separando do conteúdo que vem embaixo */
+}
+
+.titulo_rodape{
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
 }
 
 
