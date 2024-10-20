@@ -1,38 +1,53 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-    <link rel="stylesheet" type="text/css" href="css/index.css" media="screen" />
+    <title>Endereços Cadastrados</title>
+    <link rel='stylesheet' type="text/css" media="screen" href="./css/index.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <a href="">Logo</a>
-            <ul>
-                <li><a href="./view/cadastro.html">Cadastro</li></a> 
-                <li>Login</li>
-            </ul>
-        </header>
 
-        <main>
+    <main>
+        <section class="tabela-enderecos">
+            <div>
+                <img src="../img/logoSportLife.jpeg" class="logo_tabela" alt="Logo">
+            </div>
+            <h1 class="titulo_tabela">Endereços Cadastrados 📋</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>CEP</th>
+                        <th>Endereço</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody id="table_adress">
+                    <tr class="endereco">
+                        <td>Minha Casa</td>
+                        <td>12345678</td>
+                        <td>Rua das Flores, 123</td>
+                        <td>
+                            <input type="button" class="botao_atualiza" value="Atualizar" onclick="">
+                            <input type="button" class="botao_deleta" value="Deletar" onclick="">
+                        </td>
+                    </tr>
 
-        </main>   
+                    <tr class="endereco">
+                        <td>Trabalho</td>
+                        <td>28282828</td>
+                        <td>Avenida Central, 456</td>
+                        <td>
+                            <input type="button" class="botao_atualiza" value="Atualizar" onclick="">
+                            <input type="button" class="botao_deleta"   value="Deletar" onclick="">
+                        </td>
+                    </tr>
 
-        <footer>
+                </tbody>
+            </table>
+        </section>
+    </main>
 
-        </footer>
-        
-    </div>        
 </body>
 </html>
-</body>
-</html>
-
-
-
-
-
-
-
