@@ -24,7 +24,7 @@ body {
     padding: 10px; 
 }
 
-h1 {
+.titulo_tabela {
     display: block;
     margin: 0 auto;
     color: white;
@@ -64,7 +64,7 @@ thead {
 
 th, td {
     padding: 12px 15px;
-    border: 1px solid darkblue;
+    border: 1px solid white;
 }
 
 
