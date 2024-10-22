@@ -69,7 +69,7 @@ async function cadastrarEndereco() {
         
         
         if (respostaErro.data && respostaErro.data.errors) {
-            alert(respostaErro.data.errors[1]);
+            alert(respostaErro.data.errors[0]);
     }
 }
 
