@@ -20,7 +20,7 @@ async function listarEnderecos() {
             console.log(resposta);
             
             let enderecos = resposta.data;
-            let tbody = document.getElementById("addressTableBody");
+            let tbody = document.getElementById("corpo_tabela");
             tbody.innerHTML = ""; 
 
             if (Array.isArray(enderecos)) {
