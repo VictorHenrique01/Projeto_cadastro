@@ -36,7 +36,7 @@ header{
     
 .menu_cabecalho{
     display: flex;
-    gap: 180px
+    gap: 100px
 }
 
 .logo_cadastro{

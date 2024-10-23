@@ -38,7 +38,7 @@ body {
     display: grid;
     grid-template-columns: 1fr; 
     margin: 3.20rem auto; 
-    width: 80%;    
+    width: 85%;    
     grid-gap: 1.25rem;
     padding: 1.25rem;
     border-radius: 10px;
@@ -64,7 +64,8 @@ thead {
 
 th, td {
     padding: 12px 15px;
-    border: 1px solid white;
+    border: 1px solid #8ABFA3;
+    text-align: center;
 }
 
 
@@ -82,11 +83,13 @@ tbody tr:hover {
 }
 
 .botao_atualiza{
-    background-color: green;
+    color: #1B1F3A;
+    background-color: #4CC9FE;
 }
 
 .botao_atualiza:hover{
-    background-color: #8ABFA3
+    color: white;
+    background-color: #1230AE;
 }
 
 .botao_deleta{
@@ -94,5 +97,6 @@ tbody tr:hover {
 }
 
 .botao_deleta:hover{
+    text-decoration:line-through;
     background-color: grey;
 }
