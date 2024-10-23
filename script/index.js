@@ -49,5 +49,46 @@ async function listarEnderecos() {
         console.error("Erro ao listar endereços:", error);
     }
 }
+ 
+// função para deletar endereço feita abaixo:
+
+async function deletarEndereco(id) {
+    const url = `https://go-wash-api.onrender.com/api/auth/address/${id}`;
+    let token = localStorage.getItem('access_token');
+
+    if (!token) {
+        alert("Você precisa estar logado para deletar um endereço.");
+        return;
+    }
+
+    try {
+        let response = await fetch(url, {
+            method: "DELETE",
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+
+        if (response.ok) {
+            alert("Endereço deletado com sucesso!");
+            listarEnderecos(); // Atualiza a lista dps de excluir
+        } else {
+            let erro = await response.json();
+            console.error("Erro ao deletar:", erro);
+            alert("Não foi possível deletar o endereço.");
+        }
+    } catch (error) {
+        console.error("Erro ao tentar deletar o endereço:", error);
+        alert("Ocorreu um erro ao tentar deletar o endereço.");
+    }
+}
+
+// Event Listener para os botões de deletar
+document.addEventListener("click", function(event) {
+    if (event.target.classList.contains("botao_deleta")) {
+        let id = event.target.getAttribute("data-id");
+        deletarEndereco(id);
+    }
+});
 
 window.onload = listarEnderecos;
