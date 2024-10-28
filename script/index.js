@@ -32,7 +32,7 @@ async function listarEnderecos() {
                         <td>${endereco.cep}</td>
                         <td>${endereco.address}</td>
                         <td>${endereco.number}</td>
-                        <td><button class="botao_atualiza" data-id="${endereco.id}">Atualizar</button></td>
+                        <td><button class="botao_atualiza" onclick="atualizarEnd(${endereco.id})">Atualizar</button></td>
                         <td><button class="botao_deleta" data-id="${endereco.id}">Deletar</button></td>
                     `;
                     tbody.appendChild(row);
@@ -48,6 +48,11 @@ async function listarEnderecos() {
     } catch (error) {
         console.error("Erro ao listar endereços:", error);
     }
+}
+
+//função de atualizar:
+async function atualizarEnd(id) {
+    window.location.href="../view/atualiza.html?id="+id
 }
  
 //  fiz função para deletar aqui embaixo:
