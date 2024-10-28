@@ -50,7 +50,7 @@ async function listarEnderecos() {
     }
 }
  
-// função para deletar endereço feita abaixo:
+//  fiz função para deletar aqui embaixo:
 
 async function deletarEndereco(id) {
     const url = `https://go-wash-api.onrender.com/api/auth/address/${id}`;

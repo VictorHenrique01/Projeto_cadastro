@@ -15,29 +15,9 @@ async function cadastrarEndereco() {
         return;
     }
 
-        if (!title){
-        alert('É necessário preencher este campo.')
-        return;
-    }
 
-
-    if (!cep){
-        alert('É necessário preencher este campo.')
-        return;
-    }
-
-    if (!address){
-        alert('É necessário preencher este campo.')
-        return;
-    }
-
-    if (!number){
-        alert('É necessário preencher este campo.')
-        return;
-    }
-
-    if (!complement){
-        alert('É necessário preencher este campo.')
+    if (!title || !cep || !address || !number || !complement) {
+        alert('É necessário preencher todos os campos.');
         return;
     }
 
