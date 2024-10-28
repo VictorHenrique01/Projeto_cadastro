@@ -97,6 +97,8 @@ label {
 }
 
 .submit_button:hover {
+    font-weight: bold;
+    color:#536493;
     background-color: #333;
 }
 
