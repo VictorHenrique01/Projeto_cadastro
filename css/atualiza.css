@@ -102,7 +102,7 @@ label {
     background-color: #333;
 }
 
-/* Media Query para Responsividade */
+
 @media (max-width: 480px) {
     .container {
         padding: 1rem;

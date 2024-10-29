@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atualizar Endereço</title>
+    <script src="/script/atualiza.js" ></script>
     <link rel="stylesheet" href="../css/atualiza.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unlock&display=swap" rel="stylesheet">
-    
 </head>
+
 <body>
     <header></header>
 
     <div class="container">
-        
         <main>
             <section class="form">
                 <img src="../img/logoSportLife.jpeg" class="logo_endereco" alt="Logo SportLife">
                 <h1 class="titulo_forms">🔃 Atualização de Endereço 🔃</h1>
                 <form>
                     <label class="info_forms" for="title">Título</label>
-                    <input type="text" id="title" name="title" placeholder="Ex: Minha Casa" >
+                    <input type="text" id="title" name="title" placeholder="Ex: Minha Casa">
 
                     <label class="info_forms" for="cep">CEP</label>
                     <input type="text" id="cep" name="cep" placeholder="Insira o seu CEP">
 
                     <label class="info_forms" for="address">Endereço</label>
-                    <input type="text" id="address" name="address" placeholder="Endereço completo"> 
+                    <input type="text" id="address" name="address" placeholder="Endereço completo">
 
                     <label class="info_forms" for="number">Número</label>
-                    <input type="number" id="number" name="number" placeholder="Número da residência"> 
+                    <input type="number" id="number" name="number" placeholder="Número da residência">
 
-                    <button type="submit" class="submit_button">Atualizar Endereço</button>
+                    <input type="button" value="Atualizar" class="submit_button" onclick="atualizarEndereco()">
                 </form>
             </section>
         </main>
     </div>
-    
-    <script src="../script/endereco.js"></script>
 </body>
+
 </html>

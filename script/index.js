@@ -76,7 +76,7 @@ async function deletarEndereco(id) {
 
         if (response.ok) {
             alert("Endereço deletado com sucesso!");
-            listarEnderecos(); // Atualiza a lista dps de excluir
+            listarEnderecos(); 
         } else {
             let erro = await response.json();
             console.error("Erro ao deletar:", erro);
@@ -88,7 +88,7 @@ async function deletarEndereco(id) {
     }
 }
 
-// Event Listener para os botões de deletar
+
 document.addEventListener("click", function(event) {
     if (event.target.classList.contains("botao_deleta")) {
         let id = event.target.getAttribute("data-id");
