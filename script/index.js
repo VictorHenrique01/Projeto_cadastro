@@ -16,30 +16,36 @@ async function listarEnderecos() {
         });
 
         if (api.ok) {
-            let resposta = await api.json();
-            console.log(resposta);
-            
-            let enderecos = resposta.data;
-            let tbody = document.getElementById("corpo_tabela");
-            tbody.innerHTML = ""; 
+            const contentType = api.headers.get("content-type");
+            if (contentType && contentType.includes("application/json")) {
+                let resposta = await api.json();
+                console.log(resposta);
 
-            if (Array.isArray(enderecos)) {
-                enderecos.forEach(endereco => {
-                    let row = document.createElement("tr");
-                    row.innerHTML = `
-                        <td>${endereco.id}</td>
-                        <td>${endereco.title}</td>
-                        <td>${endereco.cep}</td>
-                        <td>${endereco.address}</td>
-                        <td>${endereco.number}</td>
-                        <td><button class="botao_atualiza" onclick="atualizarEnd(${endereco.id})">Atualizar</button></td>
-                        <td><button class="botao_deleta" data-id="${endereco.id}">Deletar</button></td>
-                    `;
-                    tbody.appendChild(row);
-                });
+                let enderecos = resposta.data;
+                let tbody = document.getElementById("corpo_tabela");
+                tbody.innerHTML = ""; 
+
+                if (Array.isArray(enderecos)) {
+                    enderecos.forEach(endereco => {
+                        let row = document.createElement("tr");
+                        row.innerHTML = `
+                            <td>${endereco.id}</td>
+                            <td>${endereco.title}</td>
+                            <td>${endereco.cep}</td>
+                            <td>${endereco.address}</td>
+                            <td>${endereco.number}</td>
+                            <td><button class="botao_atualiza" onclick="atualizarEnd(${endereco.id})">Atualizar</button></td>
+                            <td><button class="botao_deleta" data-id="${endereco.id}">Deletar</button></td>
+                        `;
+                        tbody.appendChild(row);
+                    });
+                } else {
+                    console.error("enderecos não são um array:", enderecos);
+                    alert("Não foram encontrados endereços.");
+                }
             } else {
-                console.error("enderecos não são um array:", enderecos);
-                alert("Não foram encontrados endereços.");
+                console.error("Resposta não é JSON:", await api.text());
+                alert("Erro ao carregar os dados. Tente novamente mais tarde.");
             }
         } else {
             let respostaErro = await api.json();
@@ -50,13 +56,12 @@ async function listarEnderecos() {
     }
 }
 
-//função de atualizar:
+// Início da Função de atualizar 
 async function atualizarEnd(id) {
-    window.location.href="../view/atualiza.html?id="+id
+    window.location.href="../view/atualiza.html?id=" + id;
 }
- 
-//  fiz função para deletar aqui embaixo:
 
+// Função para deletar
 async function deletarEndereco(id) {
     const url = `https://go-wash-api.onrender.com/api/auth/address/${id}`;
     let token = localStorage.getItem('access_token');
@@ -87,7 +92,6 @@ async function deletarEndereco(id) {
         alert("Ocorreu um erro ao tentar deletar o endereço.");
     }
 }
-
 
 document.addEventListener("click", function(event) {
     if (event.target.classList.contains("botao_deleta")) {
