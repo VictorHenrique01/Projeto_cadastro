@@ -43,7 +43,7 @@ async function atualizarEndereco() {
     let address = document.getElementById('address').value;
     let number = document.getElementById('number').value;
 
-    if (!title || !cep || !address || !number) {
+    if (!title  || !cep || !address || !number) {
         alert('É necessário preencher todos os campos.');
         return;
     }

@@ -36,7 +36,7 @@ header{
     
 .menu_cabecalho{
     display: flex;
-    gap: 150px
+    gap: 115px
 }
 
 .logo_cadastro{
@@ -84,8 +84,6 @@ header{
     background-size: cover; /* Mudança aqui */
     padding: 7.5% 10%; /* Aumenta o padding nas laterais */
     
-    
-
 }
 
 .titulo_home {

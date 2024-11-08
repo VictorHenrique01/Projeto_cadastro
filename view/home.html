@@ -20,6 +20,12 @@
             <a class="botao_cadastro" href="../view/login.html">Acesse sua conta!</a>
             <a class="botao_cadastro" href="../view/endereco.html">Cadastre seu endereço</a>
             <a class="botao_cadastro" href="#produtos_+_vendidos">Os mais vendidos</a>
+
+            <div id="logoutContainer" style="display: none;">
+                <a class="botao_cadastro" href="#" onclick="logoutUsuario()">Sair</a>
+            </div>
+            
+
         </nav>
 
         
@@ -84,6 +90,11 @@
 
     </footer>
 
+    <script src="../script/login.js"></script>
+    <script src="../script/home.js"></script>
+    <script>
+        verificarLogin(); 
+    </script>
 
 
 </body>
