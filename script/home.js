@@ -2,13 +2,12 @@
 function verificarLogin() {
     if (localStorage.getItem('access_token')) {
         document.getElementById('logoutContainer').style.display = 'block'; 
-    } else {
-        window.location.href = "../view/login.html"; 
     }
 }
 
 function logoutUsuario() {
     localStorage.removeItem('access_token');
+    alert("Logout realizado com sucesso")
     console.log("Token removido:", localStorage.getItem('access_token'));
     window.location.href = "../view/login.html"; 
 }
