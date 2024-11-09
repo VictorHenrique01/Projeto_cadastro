@@ -72,6 +72,14 @@ header{
     font-weight: 300;
 }
 
+#logoutContainer:hover{
+    background-color: #697565;
+    border: 2px groove #b3b3b3;
+    font-weight: 400;
+    color: #b3b3b3;
+}
+
+
 .inicio_pagina {
     display: flex;
     justify-content: center;
