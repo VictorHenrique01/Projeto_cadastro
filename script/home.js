@@ -14,4 +14,4 @@ function logoutUsuario() {
 
 
 document.addEventListener('DOMContentLoaded', verificarLogin);
-//não deu certo!
+// deu certo!
