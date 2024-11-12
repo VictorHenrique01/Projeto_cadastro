@@ -36,7 +36,7 @@ header{
     
 .menu_cabecalho{
     display: flex;
-    gap: 90px
+    gap: 80px
 }
 
 .logo_cadastro{
@@ -45,8 +45,8 @@ header{
     align-items: center;
     height: 7.55rem;
     width: 7.25rem;
-    border-radius: 50%; /* Deixa a imagem circular, se desejado */
-    background-color: var(--cor-detalhe); /* Cor de fundo roxa para imitar o círculo */
+    border-radius: 50%; 
+    background-color: var(--cor-detalhe); 
     padding: 10px; /* Ajusta o espaço entre a logo e a borda */
 }
 
